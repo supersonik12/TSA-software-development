@@ -7,8 +7,10 @@ body {
 }
 
 #journalInput {
-    height: 45%;
+    resize: none;
     width: 45%;
     border-radius: 4px;
+    padding: 10px;
     border-color: white;
+    font-family: 'Coming Soon', serif;
 }
