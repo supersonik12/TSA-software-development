@@ -2,7 +2,7 @@
 var d = new Date();
 
 // Sets current date in MM/DD/YYYY format
-document.getElementById("date").innerText = "Today's date is " + d.getMonth() + "/" + d.getDate() + "/" + d.getFullYear();
+document.getElementById("date").innerText = "Today's date is " + (d.getMonth()+1) + "/" + d.getDate() + "/" + d.getFullYear();
 
 // Greeting based on current time
 var greeting = "";
