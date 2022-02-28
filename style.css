@@ -13,6 +13,7 @@ body {
 #nav {
     list-style-type: none;
     display: none;
+    float: left;
 
 }
 
