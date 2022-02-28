@@ -22,5 +22,9 @@ function changeColor(color) {
 }
 
 function toggleMenu() {
-    document.getElementById("nav").style.display = "block";
+    if (document.getElementById("nav").style.display == "block") {
+        document.getElementById("nav").style.display = "none";
+    } else {
+        document.getElementById("nav").style.display = "block";
+    }
 }
