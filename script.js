@@ -20,3 +20,7 @@ document.getElementById("greeting").innerText = greeting;
 function changeColor(color) {
     document.body.style.backgroundColor = color;
 }
+
+function toggleMenu() {
+    document.getElementById("nav").style.display = "block";
+}

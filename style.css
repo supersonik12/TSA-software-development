@@ -6,6 +6,20 @@ body {
     color: white;
 }
 
+#menuButton {
+    float: left;
+}
+
+#nav {
+    list-style-type: none;
+    display: none;
+}
+
+a:link, a:visited {
+    color: white;
+    text-decoration: none;
+}
+
 #journalInput {
     resize: none;
     width: 45%;
