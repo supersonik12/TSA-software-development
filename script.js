@@ -17,7 +17,14 @@ if (d.getHours() < 12) {
 }
 document.getElementById("greeting").innerText = greeting;
 
-setup();
+if ('name' in localStorage) {
+    //alert("hello " + window.localStorage.getItem('name'))
+    var journal = JSON.parse(localStorage['journal']);
+} else {
+    var username = prompt("what is your name");
+    window.localStorage.setItem('name', username);
+    var journal = new Array();
+}
 
 function changeColor(color) {
     document.body.style.backgroundColor = color;
@@ -31,15 +38,14 @@ function toggleMenu() {
     }
 }
 
-function setup() {
-    var name = "";
-    var journal = [];
-
+function saveToStorage() {
+    var entry = document.getElementById("journalInput").value;
+    journal.push(entry);
+    //alert(journal);
+    localStorage["journal"] = JSON.stringify(journal);
+    reset();
 }
 
-function saveToStorage() {
-    journal.push(document.getElementById("journalInput").value);
-
-    alert(journal);
-    //localStorage["journal"] = JSON.stringify(journal);
+function reset() {
+    document.getElementById("journalInput").value = "";
 }
