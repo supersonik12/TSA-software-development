@@ -17,6 +17,8 @@ if (d.getHours() < 12) {
 }
 document.getElementById("greeting").innerText = greeting;
 
+setup();
+
 function changeColor(color) {
     document.body.style.backgroundColor = color;
 }
@@ -27,4 +29,17 @@ function toggleMenu() {
     } else {
         document.getElementById("nav").style.display = "block";
     }
+}
+
+function setup() {
+    var name = "";
+    var journal = [];
+
+}
+
+function saveToStorage() {
+    journal.push(document.getElementById("journalInput").value);
+
+    alert(journal);
+    //localStorage["journal"] = JSON.stringify(journal);
 }
