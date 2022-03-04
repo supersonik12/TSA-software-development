@@ -5,15 +5,15 @@ var d = new Date();
 document.getElementById("date").innerText = "Today's date is " + (d.getMonth()+1) + "/" + d.getDate() + "/" + d.getFullYear();
 
 // Greeting based on current time
-var greeting = "";
+var greeting = "\n";
 if (d.getHours() < 12) {
-    greeting = "Good morning!";
+    greeting = "\nGood morning!";
 } else if (d.getHours() < 17) {
-    greeting = "Good afternoon!";
+    greeting = "\nGood afternoon!";
 } else if (d.getHours() < 21) {
-    greeting = "Good evening!";
+    greeting = "\nGood evening!";
 } else {
-    greeting = "Good night!";
+    greeting = "\nGood night!";
 }
 document.getElementById("greeting").innerText = greeting;
 

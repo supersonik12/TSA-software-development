@@ -17,6 +17,14 @@ body {
 
 }
 
+#greeting {
+    position: fixed;
+    width: 500px;
+    height: 200px;
+    left: 50%;
+    margin-left: -250px;
+    
+}
 a:link, a:visited {
     color: white;
     text-decoration: none;
@@ -29,4 +37,36 @@ a:link, a:visited {
     padding: 10px;
     border-color: white;
     font-family: 'Coming Soon', serif;
+    position: fixed;
+    width: 500px;
+    height: 200px;
+    left: 50%;
+    margin-top: 150px;
+    margin-left: -250px;
+}
+#date{
+    position:fixed;
+    margin-left: 620px;
+
+}
+#mood{
+    position: fixed;
+    left: 50%;
+    margin-top: 350px;
+    margin-left: -150px;
+
+}
+#mood2{
+    position: fixed;
+    left: 50%;
+    margin-top: 350px;
+    margin-left: -12.5px;
+
+}
+#mood3{
+    position: fixed;
+    left: 50%;
+    margin-top: 350px;
+    margin-left: 125px;
+
 }
