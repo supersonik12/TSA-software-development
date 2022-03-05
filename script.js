@@ -26,8 +26,9 @@ if ('name' in localStorage) {
     var journal = new Array();
 }
 
-function changeColor(color) {
+function setMood(color, mood) {
     document.body.style.backgroundColor = color;
+    alert(mood);
 }
 
 function toggleMenu() {
@@ -48,4 +49,5 @@ function saveToStorage() {
 
 function reset() {
     document.getElementById("journalInput").value = "";
+    document.body.style.backgroundColor =  '#6d9eebff';
 }
