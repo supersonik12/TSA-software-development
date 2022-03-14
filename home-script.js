@@ -2,7 +2,8 @@
 var d = new Date();
 
 // Sets current date in MM/DD/YYYY format
-document.getElementById("date").innerText = "Today's date is " + (d.getMonth()+1) + "/" + d.getDate() + "/" + d.getFullYear();
+var date = (d.getMonth()+1) + "/" + d.getDate() + "/" + d.getFullYear();
+document.getElementById("date").innerText = "Today's date is " + date;
 
 // Greeting based on current time
 var greeting = "\n";
@@ -20,15 +21,20 @@ document.getElementById("greeting").innerText = greeting;
 if ('name' in localStorage) {
     //alert("hello " + window.localStorage.getItem('name'))
     var journal = JSON.parse(localStorage['journal']);
+    var dates = JSON.parse(localStorage['dates']);
+    var moods = JSON.parse(localStorage['moods']);
 } else {
-    var username = prompt("what is your name");
+    var username = prompt("What is your name?");
     window.localStorage.setItem('name', username);
     var journal = new Array();
+    var dates = new Array();
+    var moods = new Array();
 }
+var mood = "";
 
-function setMood(color, mood) {
+function setMood(color, currentMood) {
     document.body.style.backgroundColor = color;
-    alert(mood);
+    mood = currentMood;
 }
 
 function toggleMenu() {
@@ -40,14 +46,23 @@ function toggleMenu() {
 }
 
 function saveToStorage() {
+    if (mood == "") {
+        alert("Please select a mood");
+        return;
+    }
     var entry = document.getElementById("journalInput").value;
     journal.push(entry);
+    dates.push(date);
+    moods.push(mood);
     //alert(journal);
-    localStorage["journal"] = JSON.stringify(journal);
+    localStorage['journal'] = JSON.stringify(journal);
+    localStorage['dates'] = JSON.stringify(dates);
+    localStorage['moods'] = JSON.stringify(moods);
     reset();
 }
 
 function reset() {
     document.getElementById("journalInput").value = "";
     document.body.style.backgroundColor =  '#6d9eebff';
+    mood = "";
 }
