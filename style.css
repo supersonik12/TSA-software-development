@@ -89,8 +89,14 @@ a:link, a:visited {
     position: fixed;
     left: 50%;
     margin-top: 250px;
-    margin-left: -15.5px
+    margin-left: -15.5px;
+    border-radius: 3px;
+    border: 2px solid #FFFFFF;
+    background-color: transparent;
+    font-family: 'Coming Soon', serif;
+    color: #FFFFFF;
 }
+
 
 
 #row {
