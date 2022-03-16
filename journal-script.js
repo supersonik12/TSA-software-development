@@ -1,4 +1,4 @@
-if ('name' in localStorage) {
+if ('journal' in localStorage) {
     //alert("hello " + window.localStorage.getItem('name'))
     var journal = JSON.parse(localStorage['journal']);
     var dates = JSON.parse(localStorage['dates']);
@@ -7,7 +7,7 @@ if ('name' in localStorage) {
     window.location.replace("index.htm");
 }
 
-for (var index = 0; index < journal.length; index++) {
+for (var index = journal.length-1; index >= 0; index--) {
     var entry = document.createElement("newEntry");
     entry.innerText = dates[index] + "\n" + journal[index] + "\nMood: " + moods[index] + "\n\n";
     document.body.appendChild(entry);
