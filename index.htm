@@ -13,24 +13,21 @@
 
 <body>
     <button id="menuButton" onClick="toggleMenu()">Menu</button>
-    <br>
     <ul id="nav">
         <li><a href="index.htm">Home</a></li>
         <li><a href="badges.htm">Badges</a></li>
         <li><a href="journal.htm">Journal</a></li>
     </ul>
-    
-    <h1 id="greeting">Hello!</h1>
-    <h2 id="date">------</h2>
+    <div id = "header">
+        <h1 id="greeting">Hello!</h1>
+        <h2 id="date">------</h2>
+    </div>
     <textarea rows="7" cols="5" id="journalInput" placeholder="Type something here..."></textarea>
     <br>
     <br>
-    <button id="mood" onClick="setMood('#B36CB6', 'Happy')">Mood</button>
-    <button id="mood2" onClick="setMood('#011936', 'Sad')">Mood</button>
-    <button id="mood3" onClick="setMood('#20BF55', 'Anxious')">Mood</button>
-    <br>
-    <button id="submit" onClick="saveToStorage()">Submit</button>
-    
+    <button id="mood" onClick="changeColor('blue')">Mood</button>
+    <button id="mood2" onClick="changeColor('red')">Mood</button>
+    <button id="mood3" onClick="changeColor('green')">Mood</button>
 </body>
 
 </html>
