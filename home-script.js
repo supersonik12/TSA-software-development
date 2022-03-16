@@ -29,12 +29,24 @@ if ('name' in localStorage) {
     var journal = new Array();
     var dates = new Array();
     var moods = new Array();
+    localStorage['font'] = "Coming Soon";
+    localStorage['color'] = "#6d9eebff";
 }
+loadTheme();
+
 var mood = "";
 
 function setMood(color, currentMood) {
     document.body.style.backgroundColor = color;
     mood = currentMood;
+}
+
+function loadTheme() {
+    font = localStorage['font'];
+    document.body.style.fontFamily = font;
+    document.getElementById("nav").style.fontFamily = font;
+    document.getElementById("journalInput").style.fontFamily = font;
+    document.getElementById("submit").style.fontFamily = font;
 }
 
 function toggleMenu() {

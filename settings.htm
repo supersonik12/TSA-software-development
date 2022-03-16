@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap" rel="stylesheet">
-    <title>Journal</title>
+    <title>Settings</title>
 </head>
 
 <body>
@@ -21,10 +21,22 @@
         <li><a href="settings.htm">Settings</a></li>
     </ul>
     
-    <h1 id="greeting">Journal</h1>
-    
+    <h1 id="greeting">Settings</h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <select id="fontMenu" onChange="changeFont()">
+        <option value="" disabled selected>Font</option>
+        <option id="ComingSoon" value="Coming Soon">Coming Soon</option>
+        <option id="Times" value="Times New Roman">Times New Roman</option>
+        <option id="Courier" value="Courier New">Courier New</option>
+    </select>
+
 </body>
 
 </html>
 
-<script src="journal-script.js"></script>
+<script src="settings-script.js"></script>

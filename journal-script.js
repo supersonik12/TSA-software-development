@@ -6,11 +6,18 @@ if ('journal' in localStorage) {
 } else { 
     window.location.replace("index.htm");
 }
+loadTheme();
 
 for (var index = journal.length-1; index >= 0; index--) {
     var entry = document.createElement("newEntry");
     entry.innerText = dates[index] + "\n" + journal[index] + "\nMood: " + moods[index] + "\n\n";
     document.body.appendChild(entry);
+}
+
+function loadTheme() {
+    font = localStorage['font'];
+    document.body.style.fontFamily = font;
+    document.getElementById("nav").style.fontFamily = font;
 }
 
 function toggleMenu() {
