@@ -16,6 +16,15 @@ body {
     float: left;
 }
 
+nav ul li{
+    text-align: center;
+}
+
+#home {
+    text-align: center;
+}
+
+
 #header {
     position: absolute;
     text-align: center;
@@ -97,6 +106,36 @@ a:link, a:visited {
     color: #FFFFFF;
 }
 
+/*
+nav {
+    float: right;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+nav li {
+    float: right;
+  }
+
+  */
+
+  nav {
+      float: left;
+  }
+  
+  nav ul{
+      list-style-type: none;
+  }
+
+nav li a:link, a:visited {
+    display: block;
+    text-align: left;
+    padding: 16px;
+    margin: 0px 10px;
+  }
 
 
 #row {
