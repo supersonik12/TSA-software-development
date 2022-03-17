@@ -194,3 +194,13 @@ img {
     width: 95%;
 }
 
+#icons{
+    padding:1%;
+}
+.icon{
+
+    width: 50;
+    height: 50;
+    
+  }
+
