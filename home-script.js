@@ -36,8 +36,7 @@ loadTheme();
 
 var mood = "";
 
-function setMood(color, currentMood) {
-    document.body.style.backgroundColor = color;
+function setMood(currentMood) {
     mood = currentMood;
 }
 

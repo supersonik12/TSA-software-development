@@ -106,7 +106,6 @@ a:link, a:visited {
     color: #FFFFFF;
 }
 
-<<<<<<< HEAD
 /*
 nav {
     float: right;
@@ -137,15 +136,12 @@ nav li a:link, a:visited {
     padding: 16px;
     margin: 0px 10px;
   }
-=======
 #fontMenu {
     border-radius: 3px;
     border: 2px solid #FFFFFF;
     background-color: transparent;
-    font-family: 'Coming Soon', serif;
     color: #FFFFFF;
 }
->>>>>>> 4c970ccb26f707850e78867d4f8b63a0b1148cbd
 
 #ComingSoon {
     font-family: 'Coming Soon', serif;
@@ -161,6 +157,25 @@ nav li a:link, a:visited {
     font-family: 'Courier New', serif;
     color: black;
 }
+
+#nameInput {
+    background-color: transparent;
+    border-radius: 3px;
+    border: 2px solid #FFFFFF;
+    width: 170px;
+}
+input {
+    color: white;
+}
+input:focus{
+    outline: none;
+    color: white;
+}
+
+#nameInput::placeholder { 
+    color: white;
+    opacity: 1;
+  }
 
 #row {
     display: flex;
