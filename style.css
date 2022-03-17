@@ -28,12 +28,13 @@ nav {
     float: left;
 }
 
+
 nav ul {
     list-style-type: none;
 }
 
 nav ul li {
-    text-align: center;
+    width: 150px;
 }
 
 nav li a:link a:visited {
@@ -43,9 +44,12 @@ nav li a:link a:visited {
     margin: 0 10px;
 }
 
+
 #home {
-    text-align: center;
+    /* text-align: center; */
+    /* margin-left: 50px; */
 }
+
 
 
 #header {
