@@ -38,6 +38,7 @@ var mood = "";
 
 function setMood(currentMood) {
     mood = currentMood;
+    document.getElementById(currentMood).style.backgroundColor = "grey";
 }
 
 function loadTheme() {
@@ -75,5 +76,6 @@ function saveToStorage() {
 function reset() {
     document.getElementById("journalInput").value = "";
     document.body.style.backgroundColor =  '#6d9eebff';
+    document.getElementById(mood).style.backgroundColor = "transparent";
     mood = "";
 }
