@@ -45,20 +45,11 @@ nav li a:link a:visited {
 }
 
 
-#home {
-    /* text-align: center; */
-    /* margin-left: 50px; */
-}
-
-
 
 #header {
     text-align: center;
     margin-bottom: 2%;
 }
-
-
-
 
 
 a:link, a:visited {
@@ -76,22 +67,12 @@ a:link, a:visited {
 }
 
 
-#mood{
+.mood{
+  all: unset;
   margin-left:10px;  
-}
-#mood2{
-    
-    left: 50%;
-    margin-top: 200px;
-    margin-left: -12.5px;
-
-}
-#mood3{
-    
-    left: 50%;
-    margin-top: 200px;
-    margin-left: 125px;
-
+  background-color: transparent;
+  border-radius: 0;
+  outline: none;
 }
 
 #submit {
