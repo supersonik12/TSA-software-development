@@ -185,6 +185,7 @@ input:focus{
     display: flex;
 }
 
+
 .column {
     flex: 33.33%; 
 }
