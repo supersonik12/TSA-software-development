@@ -1,28 +1,9 @@
-// SET HOME PAGE TEXT BASED ON DATE AND TIME
-var d = new Date();
-
-// Sets current date in MM/DD/YYYY format
-var date = (d.getMonth()+1) + "/" + d.getDate() + "/" + d.getFullYear();
-document.getElementById("date").innerText = "Today's date is " + date;
-
-// Greeting based on current time
-var greeting = "\n";
-if (d.getHours() < 12) {
-    greeting = "\nGood morning!";
-} else if (d.getHours() < 17) {
-    greeting = "\nGood afternoon!";
-} else if (d.getHours() < 21) {
-    greeting = "\nGood evening!";
-} else {
-    greeting = "\nGood night!";
-}
-document.getElementById("greeting").innerText = greeting;
-
 if ('name' in localStorage) {
     //alert("hello " + window.localStorage.getItem('name'))
     var journal = JSON.parse(localStorage['journal']);
     var dates = JSON.parse(localStorage['dates']);
     var moods = JSON.parse(localStorage['moods']);
+    var username =  localStorage['name'];
 } else {
     var username = prompt("What is your name?");
     window.localStorage.setItem('name', username);
@@ -34,11 +15,35 @@ if ('name' in localStorage) {
 }
 loadTheme();
 
+// SET HOME PAGE TEXT BASED ON DATE AND TIME
+var d = new Date();
+
+// Sets current date in MM/DD/YYYY format
+var date = (d.getMonth()+1) + "/" + d.getDate() + "/" + d.getFullYear();
+document.getElementById("date").innerText = "Today's date is " + date;
+
+// Greeting based on current time
+var greeting = "\n";
+if (d.getHours() < 12) {
+    greeting = "\nGood morning, ";
+} else if (d.getHours() < 17) {
+    greeting = "\nGood afternoon, ";
+} else if (d.getHours() < 21) {
+    greeting = "\nGood evening, ";
+} else {
+    greeting = "\nGood night, ";
+}
+
+greeting += username + "!";
+document.getElementById("greeting").innerText = greeting;
+
+
+
 var mood = "";
 
 function setMood(currentMood) {
     mood = currentMood;
-    document.getElementById(currentMood).style.backgroundColor = "grey";
+    document.getElementById(currentMood).style.backgroundColor = "#87ceeb";
 }
 
 function loadTheme() {
